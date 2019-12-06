@@ -86,7 +86,7 @@ Highcharts.ajax({
                     return this.points.reduce(function (s, point) {
                         return s + '<br/><span style="color:' + point.color + '">\u25CF</span> ' + point.series.name + ': ' +
                             point.y;
-                    }, '<b>Game ' + this.x + ': </b>');
+                    }, '<b>Game ' + this.x+ ': </b>');
                 },
                 borderColor: "black",
                 shape:'rect',
@@ -102,18 +102,60 @@ Highcharts.ajax({
             series: [
             {
                 name: "Milwaukee Wins",
+                pointStart: 1,
                 step: 'left',
                 data: activity['data'][0],
                 color: 'Green'
             },
             {
                 name: "Houston Wins",
+                pointStart: 1,
                 step: 'left',
                 data: activity['data'][1],
                 color: 'Grey'
             }
             ],
 
+        })
+
+        //attach a div to the location of the energy chart in the html file
+        var timelineChartDiv = document.createElement('div');
+        timelineChartDiv.className = 'lineChart';
+        document.getElementById('timelineChart').appendChild(timelineChartDiv);
+
+        Highcharts.chart(timelineChartDiv, {
+            chart: {
+                type: 'timeline',
+                backgroundColor: 'transparent'
+            },
+            xAxis: {
+                ttickInterval:1,
+                title: {
+                    text: 'Number of Games Elapsed'
+                }
+            },
+            yAxis: {
+                gridLineWidth: 1,
+                title: null,
+                labels: {
+                    enabled: false
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            legend: {
+                enabled: false
+            },
+            title: {
+                text: "timeline"
+            },
+            subtitle: {
+                text: "Fig. 1"
+            },
+            tooltip: {
+                snap: 100
+            },
         })
 
     }
