@@ -32,7 +32,7 @@ Highcharts.ajax({
                 }
             },
             subtitle: {
-                text: 'Fig. 2?',
+                text: 'Games Won',
                 align: 'left'
             },
             legend: {
@@ -40,20 +40,23 @@ Highcharts.ajax({
             },
 
             plotOptions: {
-
+                series: {
+                    marker: {
+                        enabled: false,
+                    }
+                }
             },
             
             xAxis: {
-                type: 'datetime',
-                tickInterval: 24 * 3600 * 1000,
-                dateTimeLabelFormats: {
-                    day: '%a \n %d %b'
-                },
+                tickInterval:1,
+                title: {
+                    text: 'Number of Games Elapsed'
+                }
             },
 
             yAxis: {
                 title: {
-                    enabled: false
+                    enabled: false,
                 },
                 labels: {
                     formatter: function () {
@@ -76,6 +79,15 @@ Highcharts.ajax({
                     color: 'red',
                     zIndex: 3
                     }],
+                positioner : function () {
+                    return {x : this.chart.chartWidth - this.label.width-20 , y : 10}
+                },
+                formatter: function () {
+                    return this.points.reduce(function (s, point) {
+                        return s + '<br/><span style="color:' + point.color + '">\u25CF</span> ' + point.series.name + ': ' +
+                            point.y;
+                    }, '<b>Game ' + this.x + ': </b>');
+                },
                 borderColor: "black",
                 shape:'rect',
                 snap:50,
@@ -90,16 +102,12 @@ Highcharts.ajax({
             series: [
             {
                 name: "Milwaukee Wins",
-                pointStart: Date.UTC(2019,9,17,0,0,0,0) ,
-                    pointInterval: 86400000,
                 step: 'left',
                 data: activity['data'][0],
                 color: 'Green'
             },
             {
                 name: "Houston Wins",
-                pointStart: Date.UTC(2019,9,17,0,0,0,0) ,
-                    pointInterval: 86400000,
                 step: 'left',
                 data: activity['data'][1],
                 color: 'Grey'
