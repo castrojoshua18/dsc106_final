@@ -12,8 +12,6 @@ Highcharts.ajax({
         activity = JSON.parse(activity);
         fullData = activity;
 
-        console.log(activity)
-
         //attach a div to the location of the energy chart in the html file
         var lineChartDiv = document.createElement('div');
         lineChartDiv.className = 'lineChart';
@@ -129,7 +127,7 @@ Highcharts.ajax({
                 backgroundColor: 'transparent'
             },
             xAxis: {
-                ttickInterval:1,
+                tickInterval:1,
                 title: {
                     text: 'Number of Games Elapsed'
                 }
@@ -156,6 +154,34 @@ Highcharts.ajax({
             tooltip: {
                 snap: 100
             },
+            series : {
+                pointStart: 1,
+                dataLabels: {
+                    allowOverlap: false,
+                //     format: '<span style="color:{point.color}">● </span><span style="font-weight: bold;" > ' +
+                // '{point.label}'
+                },
+                data: [
+                    {
+                        // x: 6,
+                        name: 'Team Accomplishment',
+                        label: 'Team',
+                        description: "Seven game win streak to open the season. First 7-0 start since 1971-1972.",
+                    },
+                    {
+                        // x: 6,
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eastern Conference Player of the Week for performance in games 2 - 5"
+                    },
+                    {
+                        // x: 17,
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description:"Earned Eastern Conference Player of the Week for performance in games 14 - 17"
+                    }
+                ]
+            }
         })
 
     }
