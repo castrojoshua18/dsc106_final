@@ -1,6 +1,6 @@
 'use strict';
 
-const JSONFileName = 'https://raw.githubusercontent.com/castrojoshua18/dsc106_final/master/assets/season_results.json?token=AKL7YHE7G6MR3Y4WYXTTNG256HOG4'
+const JSONFileName = 'https://raw.githubusercontent.com/castrojoshua18/dsc106_final/master/assets/season_results.json?token=AKL7YHAXJQUZHIAIT55DMM256PVZG';
 
 var fullData;
 
@@ -11,8 +11,6 @@ Highcharts.ajax({
         
         activity = JSON.parse(activity);
         fullData = activity;
-
-        console.log(activity)
 
         //attach a div to the location of the energy chart in the html file
         var lineChartDiv = document.createElement('div');
@@ -43,12 +41,21 @@ Highcharts.ajax({
                 series: {
                     marker: {
                         enabled: false,
+                    },
+                    states: {
+                        inactive: {
+                          opacity: 1
+                        }
                     }
                 }
             },
             
             xAxis: {
-                tickInterval:1,
+                type: 'datetime',
+                tickInterval: 24 * 3600 * 1000,
+                dateTimeLabelFormats: {
+                    day: '%a \n %d %b'
+                },
                 title: {
                     text: 'Number of Games Elapsed'
                 }
@@ -86,7 +93,7 @@ Highcharts.ajax({
                     return this.points.reduce(function (s, point) {
                         return s + '<br/><span style="color:' + point.color + '">\u25CF</span> ' + point.series.name + ': ' +
                             point.y;
-                    }, '<b>Game ' + this.x + ': </b>');
+                    }, '<b>Game ' + this.x+ ': </b>');
                 },
                 borderColor: "black",
                 shape:'rect',
@@ -102,18 +109,88 @@ Highcharts.ajax({
             series: [
             {
                 name: "Milwaukee Wins",
+                pointStart: 1539734400000000000,
                 step: 'left',
-                data: activity['data'][0],
+                data: activity['history'][0],
                 color: 'Green'
             },
             {
                 name: "Houston Wins",
+                pointStart: 1539734400000000000,
                 step: 'left',
-                data: activity['data'][1],
+                data: activity['history'][1],
                 color: 'Grey'
             }
             ],
 
+        })
+
+        //attach a div to the location of the energy chart in the html file
+        var timelineChartDiv = document.createElement('div');
+        timelineChartDiv.className = 'lineChart';
+        document.getElementById('timelineChart').appendChild(timelineChartDiv);
+
+        Highcharts.chart(timelineChartDiv, {
+            chart: {
+                type: 'timeline',
+                backgroundColor: 'transparent'
+            },
+            xAxis: {
+                tickInterval:1,
+                title: {
+                    text: 'Number of Games Elapsed'
+                }
+            },
+            yAxis: {
+                gridLineWidth: 1,
+                title: null,
+                labels: {
+                    enabled: false
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            legend: {
+                enabled: false
+            },
+            title: {
+                text: "timeline"
+            },
+            subtitle: {
+                text: "Fig. 1"
+            },
+            tooltip: {
+                snap: 100
+            },
+            series : {
+                pointStart: 1,
+                dataLabels: {
+                    allowOverlap: false,
+                //     format: '<span style="color:{point.color}">● </span><span style="font-weight: bold;" > ' +
+                // '{point.label}'
+                },
+                data: [
+                    {
+                        // x: 6,
+                        name: 'Team Accomplishment',
+                        label: 'Team',
+                        description: "Seven game win streak to open the season. First 7-0 start since 1971-1972.",
+                    },
+                    {
+                        // x: 6,
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eastern Conference Player of the Week for performance in games 2 - 5"
+                    },
+                    {
+                        // x: 17,
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description:"Earned Eastern Conference Player of the Week for performance in games 14 - 17"
+                    }
+                ]
+            }
         })
 
     }
