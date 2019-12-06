@@ -1,6 +1,6 @@
 'use strict';
 
-const JSONFileName = 'https://raw.githubusercontent.com/castrojoshua18/dsc106_final/master/assets/season_results.json?token=AKL7YHE7G6MR3Y4WYXTTNG256HOG4'
+const JSONFileName = 'https://raw.githubusercontent.com/castrojoshua18/dsc106_final/master/assets/season_results.json?token=AKL7YHAXJQUZHIAIT55DMM256PVZG';
 
 var fullData;
 
@@ -41,12 +41,21 @@ Highcharts.ajax({
                 series: {
                     marker: {
                         enabled: false,
+                    },
+                    states: {
+                        inactive: {
+                          opacity: 1
+                        }
                     }
                 }
             },
             
             xAxis: {
-                tickInterval:1,
+                type: 'datetime',
+                tickInterval: 24 * 3600 * 1000,
+                dateTimeLabelFormats: {
+                    day: '%a \n %d %b'
+                },
                 title: {
                     text: 'Number of Games Elapsed'
                 }
@@ -100,16 +109,16 @@ Highcharts.ajax({
             series: [
             {
                 name: "Milwaukee Wins",
-                pointStart: 1,
+                pointStart: 1539734400000000000,
                 step: 'left',
-                data: activity['data'][0],
+                data: activity['history'][0],
                 color: 'Green'
             },
             {
                 name: "Houston Wins",
-                pointStart: 1,
+                pointStart: 1539734400000000000,
                 step: 'left',
-                data: activity['data'][1],
+                data: activity['history'][1],
                 color: 'Grey'
             }
             ],
