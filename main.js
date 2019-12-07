@@ -21,7 +21,10 @@ Highcharts.ajax({
         Highcharts.chart(lineChartDiv, {
             chart:{
                 type: 'line',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                style: {
+                    fontFamily: "Roboto"
+                }
             },
             title: {
                 text: 'catchy name',
@@ -33,9 +36,6 @@ Highcharts.ajax({
             subtitle: {
                 text: 'Games Won',
                 align: 'left'
-            },
-            legend: {
-                enabled: false
             },
 
             plotOptions: {
@@ -137,6 +137,9 @@ Highcharts.ajax({
                 type: 'timeline',
                 backgroundColor: 'transparent'
             },
+            colors: [
+                "#00471B"
+            ],
             xAxis: {
                 type: 'datetime',
                 visible: true,
@@ -169,9 +172,9 @@ Highcharts.ajax({
                 text: "timeline"
             },
             tooltip: {
-                positioner : function () {
-                    return {x : this.chart.chartWidth - this.label.width-20 , y : 10}
-                },
+                // positioner : function () {
+                //     return {x : this.chart.chartWidth - this.label.width-20 , y : 10}
+                // },
                 borderColor: "black",
                 shape:'rect',
                 snap:50,

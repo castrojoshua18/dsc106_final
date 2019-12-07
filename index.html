@@ -8,24 +8,13 @@
         <title> MVP RACE</title>
     </head>
     <body>
-        <h1>
-            <!-- <div style="background-image: ;" -->
-            <center> Giannis Antetokounmpo: The Undisputed 2019 NBA League MVP</center>
-        </h1>
-        <!-- Page header table -->
-        <!-- <table class="simpletable">
-          
-            <tr>
-              <td width="5%"><img src="https://somebodymarketing.com/wp-content/uploads/freshizer/5e827ffb77b8a5ca7ea4b4454c014603_Blog_NBALogo-863-430-c@2x.png" alt="NBALogo" class="pageLogo" height="75px"></td>
-              <td><h1><center>MVP RACE 2019</center></h1></td>
-            </tr>
-        </table> -->
         <!-- Chart placement table -->
         <table class="simpleTable">
-            <tr style="border-width: 1px">
+            <tr>
                 <td>
-                    <table style="border-width: 1px">
+                    <table>
                         <tr>
+                            <div id = 'grad'>
                             <td>
                                 <img src = "assets/giannis.png" height="300">
                                 <h3> <center>Giannis Antetokounmpo</center></h3>
@@ -33,7 +22,13 @@
                                             
                             </td>
                             <td>
+                                
                                 <p>
+                                    <h1>
+                                            
+                                            <center> Giannis Antetokounmpo: </br>The Undisputed 2019 NBA League MVP</center>
+                                            
+                                    </h1>
                                     The <b>MVP</b> or Most Valuable Player award is one of the most coveted and respected personal achievements
                                     a player can obtain. Each year, two or three significantly exceed league averages in terms of player statistics
                                     and exemplify the pinnacle of leadership a player in the NBA, the National Basketball Association.
@@ -52,51 +47,52 @@
                                     <h3> <center>James Harden</center></h3>
                                     <h4><center>Guard for the Houston Rockets</center></h4>
                                                 
-                                </td>
+                            </td>
+                            </div>
                         </tr>
                     </table>
                 </td>
             </tr>
             <tr>
-                <td id = "timelineChart"></td>
+                <td width = '100%' id = "timelineChart"></td>
             </tr>
             <tr>
                 <td id = 'lineChart'></td>
             </tr>
+        </table>
+        <table class = "simpleTable">
             <tr>
                 <td width = "33%"><div id="basicStats"></div></td>
                 <td width = "34%">
                         <table>
+                                <h3><center>Glossary</center></h3>
                                 <tr>
-                                    <td>FG % (<i>Field Goal Percentage</i>)</td>
-                                    <td>The ratio of field goals made to field goals attempted. A higher field goal percentage denotes higher efficiency. 
-                                        Field goal percentage does not completely tell the skill of a player, but a low field goal percentage can indicate a 
-                                        poor offensive player or a player who takes many difficult shots.
+                                    <td><b>FG % </br><font size='2'>(<i>Field Goal Percentage</i>)</font></b></td>
+                                    <td>The ratio of field goals made to field goals attempted
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>FT % (<i>Free Throw Percentage</i>)</td>
-                                    <td> INFO </td>
+                                    <td><b>FT % </br><font size='2'>(<i>Free Throw Percentage</i>)</font></b></td>
+                                    <td> The ratio of free throws made to free throws attempted. </td>
                                 </tr>
                                 <tr>
-                                    <td>PIE (<i>Player Impact Estimate</i>)</td>
-                                    <td>In its simplest terms, PIE shows what % of game events did that player or team achieve.
-                                            The stats being analyzed are your traditional basketball statistics (PTS, REB, AST, TOV, etc..) 
-                                            A team that achieves more than 50% is likely to be a winning team. 
-                                            A player that achieves more than 10% is likely to be better than the average player.
+                                    <td><b>PIE </br><font size='2'>(<i>Player Impact Estimate</i>)</font></b></td>
+                                    <td>The percent of game events a player or team achieves in regards to traditional
+                                         basketball statistics (PTS, REB, AST, TOV, etc..). A player that achieves more than 10% is 
+                                         likely to be better than the average player.
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>EFG (<i>Effective Field Goal Percentage</i>)</td>
-                                    <td>Its goal is to show what field goal percentage a two-point shooter would have to shoot at to match the output of a player who also shoots three-pointers.</td>
+                                    <td><b>EFG </br><font size='2'>(<i>Effective Field Goal Percentage</i>)</font></b></td>
+                                    <td>Normalized field goal percentage to compensate for players who shoot less three point shots.</td>
                                 </tr>
                                 <tr>
-                                    <td>Net Rating</td>
-                                    <td>Net rating is the offensive rating minus the defensive rating, but simply put it can be defined as how much better or worse the team is when a specific player is on the court.</td>
+                                    <td><b>Net Rating</b></td>
+                                    <td> Difference between offensive rating and defensive rating</td>
                                 </tr>
                                 <tr>
-                                    <td>RB % (<i>Rebound Percentage</i>)</td>
-                                    <td>statistic to gauge how effective a player is at gaining possession of the basketball after a missed field goal or free throw. Rebound rate is an estimate of the percentage of missed shots a player rebounded while he was on the floor.</td>
+                                    <td><b>RB % </br><font size='2'>(<i>Rebound Percentage</i>)</font></b></td>
+                                    <td> Gauges how effective a player is at gaining possession of the basketball after a missed basket.</td>
                                 </tr>
                             </table>
                 </td>
