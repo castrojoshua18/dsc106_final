@@ -33,6 +33,7 @@ Highcharts.chart('basicStats', {
 
     title: {
         text: 'Giannis Vs. Harden - Basic Stats',
+        align: "center",
         x: -80
     },
     subtitle: {
@@ -168,6 +169,7 @@ Highcharts.chart('advStats', {
 
     title: {
         text: 'Giannis Vs. Harden - Advanced Stats',
+        align: "center",
         x: -80
     },
     subtitle: {
