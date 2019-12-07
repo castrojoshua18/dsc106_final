@@ -1,6 +1,6 @@
 'use strict';
 
-const JSONFileName = 'https://raw.githubusercontent.com/castrojoshua18/dsc106_final/master/assets/season_results.json?token=AKL7YHAXJQUZHIAIT55DMM256PVZG';
+const JSONFileName = 'https://raw.githubusercontent.com/castrojoshua18/dsc106_final/master/assets/season_results.json?token=AKL7YHDEZVPD3VGWHZIIAOK56PX2Y';
 
 var fullData;
 
@@ -52,7 +52,7 @@ Highcharts.ajax({
             
             xAxis: {
                 type: 'datetime',
-                tickInterval: 24 * 3600 * 1000,
+                tickInterval: 7*24 * 3600 * 1000,
                 dateTimeLabelFormats: {
                     day: '%a \n %d %b'
                 },
@@ -90,10 +90,11 @@ Highcharts.ajax({
                     return {x : this.chart.chartWidth - this.label.width-20 , y : 10}
                 },
                 formatter: function () {
+                    var dateEntry = Highcharts.dateFormat('%B %d, %Y', this.x)
                     return this.points.reduce(function (s, point) {
                         return s + '<br/><span style="color:' + point.color + '">\u25CF</span> ' + point.series.name + ': ' +
                             point.y;
-                    }, '<b>Game ' + this.x+ ': </b>');
+                    }, '<b> By ' +dateEntry + ': </b>');
                 },
                 borderColor: "black",
                 shape:'rect',
@@ -109,14 +110,14 @@ Highcharts.ajax({
             series: [
             {
                 name: "Milwaukee Wins",
-                pointStart: 1539734400000000000,
+                pointStart: activity['history'][0][0][0],
                 step: 'left',
                 data: activity['history'][0],
                 color: 'Green'
             },
             {
                 name: "Houston Wins",
-                pointStart: 1539734400000000000,
+                pointStart: activity['history'][1][0][0],
                 step: 'left',
                 data: activity['history'][1],
                 color: 'Grey'
@@ -136,10 +137,8 @@ Highcharts.ajax({
                 backgroundColor: 'transparent'
             },
             xAxis: {
-                tickInterval:1,
-                title: {
-                    text: 'Number of Games Elapsed'
-                }
+                type: 'datetime',
+                visible: true
             },
             yAxis: {
                 gridLineWidth: 1,
@@ -148,49 +147,97 @@ Highcharts.ajax({
                     enabled: false
                 }
             },
-            credits: {
-                enabled: false
-            },
             legend: {
                 enabled: false
             },
             title: {
-                text: "timeline"
+                text: "Chadwick Boseman has almost equally lead as many movies as he has been a non-lead role."
             },
             subtitle: {
-                text: "Fig. 1"
+                text: "Fig. 1: A visualized transition of Boseman's role in featured movies (U.S. domestic)"
             },
             tooltip: {
                 snap: 100
             },
-            series : {
-                pointStart: 1,
+            credits: {
+                enabled: false
+            },
+            series: [{
+                pointStart: Date.UTC(2008, 10, 22),
                 dataLabels: {
                     allowOverlap: false,
-                //     format: '<span style="color:{point.color}">● </span><span style="font-weight: bold;" > ' +
-                // '{point.label}'
+                    format: '<span style="color:{point.color}">● </span><span style="font-weight: bold;" > ' +
+                '{point.label}'
                 },
-                data: [
-                    {
-                        // x: 6,
-                        name: 'Team Accomplishment',
-                        label: 'Team',
-                        description: "Seven game win streak to open the season. First 7-0 start since 1971-1972.",
+                 data: [{
+                        x: Date.UTC(2008, 10, 22),
+                        name: 'The Express (2008)',
+                        label: 'Support',
+                        description: "Part: Floyd Little",
                     },
                     {
-                        // x: 6,
-                        name: 'Personal Accomplishment',
-                        label: 'Personal',
-                        description: "Earned Eastern Conference Player of the Week for performance in games 2 - 5"
+                        x: Date.UTC(2013, 3, 12),
+                        name: '42 (2013)',
+                        label: 'Lead',
+                        description: "Part: Jackie Robinson",
                     },
                     {
-                        // x: 17,
-                        name: 'Personal Accomplishment',
-                        label: 'Personal',
-                        description:"Earned Eastern Conference Player of the Week for performance in games 14 - 17"
-                    }
+                        x: Date.UTC(2014, 5, 22),
+                        name: 'Draft Day (2014)',
+                        label: 'Support',
+                        description: "Part: Vontae Mack"
+                    },
+                    {
+                        x: Date.UTC(2014, 7, 1),
+                        name: 'Get on Up (2014)',
+                        label: 'Lead',
+                        description: "Part: James Brown",
+                    },
+                    {
+                        x: Date.UTC(2016, 1, 26),
+                        name: 'Gods of Egypt (2016)',
+                        label: 'Support',
+                        description: "Part: Thoth"
+                    },
+                    {
+                        x: Date.UTC(2016, 4, 6),
+                        name: 'Captain America: Civil War (2016)',
+                        label: 'Support',
+                        description: "Part: T'Challa - Black Panther"
+                    },
+                    {
+                        x: Date.UTC(2017, 9, 13),
+                        name: 'Marshall (2017)',
+                        label: 'Lead',
+                        description: "Part: Thurgood Marshall",
+                    },
+                    {
+                        x: Date.UTC(2018, 1, 16),
+                        name: 'Black Panther (2018)',
+                        label: 'Lead',
+                        description: "Part: T'Challa - Black Panther",
+
+                    },
+                    {
+                        x: Date.UTC(2018, 3, 27),
+                        name: 'Avengers: Infinity War (2018)',
+                        label: 'Support',
+                        description: "Part: T'Challa - Black Panther"
+                    },
+                    {
+                        x: Date.UTC(2019, 3, 26),
+                        name: 'Avengers: Endgame (2019)',
+                        label: 'Support',
+                        description: "Part: T'Challa - Black Panther"
+                    },
+                    {
+                        x: Date.UTC(2019, 10, 22),
+                        name: '21 Bridges (2019)',
+                        label: 'Lead',
+                        description: "Part: Andre Davis",
+                    },
                 ]
-            }
+            }]
         })
 
     }
