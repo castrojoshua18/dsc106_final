@@ -112,7 +112,7 @@ Highcharts.chart('basicStats', {
     tooltip: {
         shared: true,
         pointFormatter: percentFormatter,
-        // pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y} per game</b><br/>'
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y} per game</b><br/>'
     },
 
     legend: {
