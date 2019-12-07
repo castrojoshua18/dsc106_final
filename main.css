@@ -14,7 +14,18 @@ body {
 
 #grad {
     background-image: linear-gradient( #f7ead7,white,#f7ead7);
-  }
+}
+#vignette {
+    width: 140px;
+   height: 140px;
+   background: white; 
+   -moz-border-radius: 70px; 
+   -webkit-border-radius: 70px; 
+   border-radius: 70px;
+}
+#grad_r {
+    background-image: radial-gradient( #f7ead7,white,#f7ead7);
+}
 
 .lineChart {
     background-color: transparent;
