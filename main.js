@@ -151,10 +151,10 @@ Highcharts.ajax({
                 enabled: false
             },
             title: {
-                text: "Chadwick Boseman has almost equally lead as many movies as he has been a non-lead role."
+                text: "timeline"
             },
             subtitle: {
-                text: "Fig. 1: A visualized transition of Boseman's role in featured movies (U.S. domestic)"
+                text: "timeline"
             },
             tooltip: {
                 snap: 100
@@ -163,79 +163,48 @@ Highcharts.ajax({
                 enabled: false
             },
             series: [{
-                pointStart: Date.UTC(2008, 10, 22),
+                pointStart: Date.UTC(2018, 9, 17),
                 dataLabels: {
                     allowOverlap: false,
-                    format: '<span style="color:{point.color}">● </span><span style="font-weight: bold;" > ' +
-                '{point.label}'
                 },
                  data: [{
-                        x: Date.UTC(2008, 10, 22),
-                        name: 'The Express (2008)',
-                        label: 'Support',
-                        description: "Part: Floyd Little",
+                        x: Date.UTC(2018, 9, 29),
+                        name: 'Team Accomplishment',
+                        label: 'Team',
+                        description: "Seven game win streak to open the season. First 7-0 start since 1971-1972.",
                     },
                     {
-                        x: Date.UTC(2013, 3, 12),
-                        name: '42 (2013)',
-                        label: 'Lead',
-                        description: "Part: Jackie Robinson",
+                        x: Date.UTC(2018,9,29),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eastern Conference Player of the Week for performance in games 2 - 5",
                     },
                     {
-                        x: Date.UTC(2014, 5, 22),
-                        name: 'Draft Day (2014)',
-                        label: 'Support',
-                        description: "Part: Vontae Mack"
+                        x: Date.UTC(2018, 10, 23),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eastern Conference Player of the Week for performance in games 14 - 17"
                     },
                     {
-                        x: Date.UTC(2014, 7, 1),
-                        name: 'Get on Up (2014)',
-                        label: 'Lead',
-                        description: "Part: James Brown",
+                        x: Date.UTC(2018, 9, 29),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eastern Conference Player of the Month for performance in October"
                     },
                     {
-                        x: Date.UTC(2016, 1, 26),
-                        name: 'Gods of Egypt (2016)',
-                        label: 'Support',
-                        description: "Part: Thoth"
+                        x: Date.UTC(2018, 10, 28),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eastern Conference Player of the Month for performance in November"
                     },
                     {
-                        x: Date.UTC(2016, 4, 6),
-                        name: 'Captain America: Civil War (2016)',
-                        label: 'Support',
-                        description: "Part: T'Challa - Black Panther"
+                        x: Date.UTC(2018, 11, 29),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eurostar European Player of the Month for performance in November"
                     },
-                    {
-                        x: Date.UTC(2017, 9, 13),
-                        name: 'Marshall (2017)',
-                        label: 'Lead',
-                        description: "Part: Thurgood Marshall",
-                    },
-                    {
-                        x: Date.UTC(2018, 1, 16),
-                        name: 'Black Panther (2018)',
-                        label: 'Lead',
-                        description: "Part: T'Challa - Black Panther",
 
-                    },
-                    {
-                        x: Date.UTC(2018, 3, 27),
-                        name: 'Avengers: Infinity War (2018)',
-                        label: 'Support',
-                        description: "Part: T'Challa - Black Panther"
-                    },
-                    {
-                        x: Date.UTC(2019, 3, 26),
-                        name: 'Avengers: Endgame (2019)',
-                        label: 'Support',
-                        description: "Part: T'Challa - Black Panther"
-                    },
-                    {
-                        x: Date.UTC(2019, 10, 22),
-                        name: '21 Bridges (2019)',
-                        label: 'Lead',
-                        description: "Part: Andre Davis",
-                    },
+                    
                 ]
             }]
         })

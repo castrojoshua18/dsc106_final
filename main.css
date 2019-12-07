@@ -1,7 +1,7 @@
 body {
     background: "#ece9e6";
     color: "#333";
-    font-family: 'Roboto';
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 }
 
 .simpleTable {
@@ -13,8 +13,10 @@ body {
 
 .lineChart {
     background-color: transparent;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 }
 
 .greaterArea tr td { 
+    border: 1px solid black;
     width:70%; 
 }
