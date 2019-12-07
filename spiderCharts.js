@@ -197,7 +197,7 @@ Highcharts.chart('advStats', {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
-        max: 50,
+        max: 100,
         angle: 0,
         tickAmount: 5,
         labels: {
@@ -217,7 +217,7 @@ Highcharts.chart('advStats', {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
-        max: 25,
+        max: 100,
         angle: 120,
         tickAmount: 5,
         labels: {
