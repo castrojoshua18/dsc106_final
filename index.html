@@ -8,7 +8,10 @@
         <title> MVP RACE</title>
     </head>
     <body>
-        <h1><center> Giannis Antetokounmpo: The Undisputed 2019 NBA League MVP</center></h1>
+        <h1>
+            <!-- <div style="background-image: ;" -->
+            <center> Giannis Antetokounmpo: The Undisputed 2019 NBA League MVP</center>
+        </h1>
         <!-- Page header table -->
         <!-- <table class="simpletable">
           
@@ -18,8 +21,8 @@
             </tr>
         </table> -->
         <!-- Chart placement table -->
-        <table class="simpleTable greaterArea">
-            <tr colspan =  "3" style="border-width: 1px">
+        <table class="simpleTable">
+            <tr style="border-width: 1px">
                 <td>Insert Bio/Info</td>
             </tr>
             <tr id = 'syncedGrid' id = "container">
@@ -35,9 +38,31 @@
                 </td>
             </tr>
             <tr>
-                <td><div id="basicStats"></div></td>
-                <td>Legend</td>
-                <td><div id="advStats"></div></td>
+                <td width = "33%"><div id="basicStats"></div></td>
+                <td width = "34%">
+                    <table>
+                        <tr>
+                            <td>FG % (<i>Field Goal Percentage</i>)</td>
+                            <td>The ratio of field goals made to field goals attempted. A higher field goal percentage denotes higher efficiency. 
+                                Field goal percentage does not completely tell the skill of a player, but a low field goal percentage can indicate a 
+                                poor offensive player or a player who takes many difficult shots.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>FT % (<i>Free Throw Percentage</i>)</td>
+                            <td> INFO </td>
+                        </tr>
+                        <tr>
+                            <td>PIE (<i>Player Impact Estimate</i>)</td>
+                            <td>In its simplest terms, PIE shows what % of game events did that player or team achieve.
+                                    The stats being analyzed are your traditional basketball statistics (PTS, REB, AST, TOV, etc..) 
+                                    A team that achieves more than 50% is likely to be a winning team. 
+                                    A player that achieves more than 10% is likely to be better than the average player.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width = "33%"><div id="advStats"></div></td>
             </tr>
         </table>
         
