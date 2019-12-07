@@ -24,7 +24,8 @@ Highcharts.chart('basicStats', {
         type: 'area',
         events: {
             load: switchToPercent
-        }
+        },
+        backgroundColor: 'transparent'
     },
 
     accessibility: {
@@ -34,7 +35,6 @@ Highcharts.chart('basicStats', {
     title: {
         text: 'Giannis Vs. Harden - Basic Stats',
         align: "center",
-        x: -80
     },
     subtitle: {
         text: "Source: NBA"
@@ -129,7 +129,7 @@ Highcharts.chart('basicStats', {
         color: "#808080",
         data: [6.6, 7.5, 2, .7, 36.1],
     }, {
-        name: 'Giannia Antetokounmpo',
+        name: 'Giannis Antetokounmpo',
         color: "#00471B",
         
         data: [12.5, 5.9, 1.3, 1.5, 27.7],
@@ -160,7 +160,8 @@ Highcharts.chart('advStats', {
         type: 'area',
         events: {
             load: switchToPercent
-        }
+        },
+        backgroundColor: 'transparent'
     },
 
     accessibility: {
@@ -169,8 +170,7 @@ Highcharts.chart('advStats', {
 
     title: {
         text: 'Giannis Vs. Harden - Advanced Stats',
-        align: "center",
-        x: -80
+        align: 'center'
     },
     subtitle: {
         text: "Source: NBA"

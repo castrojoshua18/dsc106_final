@@ -25,7 +25,7 @@ Highcharts.ajax({
             },
             title: {
                 text: 'catchy name',
-                align: 'left',
+                align: 'center',
                 style: {
                     fontSize: '15px'
                 }
@@ -114,14 +114,14 @@ Highcharts.ajax({
                 pointStart: activity['history'][0][0][0],
                 step: 'left',
                 data: activity['history'][0],
-                color: 'Green'
+                color: "#00471B"
             },
             {
                 name: "Houston Wins",
                 pointStart: activity['history'][1][0][0],
                 step: 'left',
                 data: activity['history'][1],
-                color: 'Grey'
+                color: "#808080"
             }
             ],
 
