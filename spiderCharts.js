@@ -36,7 +36,7 @@ Highcharts.chart('basicStats', {
         x: -80
     },
     subtitle: {
-        text: "Source: ESPN"
+        text: "Source: NBA"
     },
     pane: {
         size: '90%'
@@ -53,42 +53,59 @@ Highcharts.chart('basicStats', {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
-        visible: false,
+        labels: {
+            enabled: false
+        }
     }, {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
         max: 15,
         angle: 0,
-        tickAmount: 5
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }, {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
         max: 10,
         angle: 72,
-        tickAmount: 5
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }, {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
         max: 3,
         angle: 144,
-        tickAmount: 5
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }, {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
         max: 4,
         angle: 216,
-        tickAmount: 5
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }, {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
         max: 40,
         angle: 288,
-        tickAmount: 5
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }],
 
     tooltip: {
@@ -135,7 +152,7 @@ Highcharts.chart('basicStats', {
     }
 
 }); 
-Highcharts.chart('advancedStats', {
+Highcharts.chart('advStats', {
 
     chart: {
         polar: true,
@@ -154,15 +171,15 @@ Highcharts.chart('advancedStats', {
         x: -80
     },
     subtitle: {
-        text: "Source: ESPN"
+        text: "Source: NBA"
     },
     pane: {
         size: '90%'
     },
 
     xAxis: {
-        categories: ['Rebounds', 'Assists', 'Steals', 'Blocks',
-            'Points'],
+        categories: ['FG %', 'FT%', 'PIE', 'EFG', 'Net Rating',
+            'RB %'],
         tickmarkPlacement: 'on',
         lineWidth: 0
     },
@@ -171,42 +188,69 @@ Highcharts.chart('advancedStats', {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
-        visible: false,
+        labels: {
+            enabled: false
+        }
+    }, {
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0,
+        max: 50,
+        angle: 0,
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
+    }, {
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0,
+        max: 100,
+        angle: 60,
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
+    }, {
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0,
+        max: 25,
+        angle: 120,
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
+    }, {
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0,
+        max: 100,
+        angle: 180,
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }, {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
         max: 15,
-        angle: 0,
-        tickAmount: 5
+        angle: 240,
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }, {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
-        max: 10,
-        angle: 72,
-        tickAmount: 5
-    }, {
-        gridLineInterpolation: 'polygon',
-        lineWidth: 0,
-        min: 0,
-        max: 3,
-        angle: 144,
-        tickAmount: 5
-    }, {
-        gridLineInterpolation: 'polygon',
-        lineWidth: 0,
-        min: 0,
-        max: 4,
-        angle: 216,
-        tickAmount: 5
-    }, {
-        gridLineInterpolation: 'polygon',
-        lineWidth: 0,
-        min: 0,
-        max: 40,
-        angle: 288,
-        tickAmount: 5
+        max: 100,
+        angle: 300,
+        tickAmount: 5,
+        labels: {
+            enabled: false
+        }
     }],
 
     tooltip: {
@@ -227,12 +271,12 @@ Highcharts.chart('advancedStats', {
     series: [{
         name: 'James Harden',
         color: "#808080",
-        data: [6.6, 7.5, 2, .7, 36.1],
+        data: [44.2, 87.9, 20.1, 54.1, 6.3, 8.9],
     }, {
         name: 'Giannia Antetokounmpo',
         color: "#00471B",
         
-        data: [12.5, 5.9, 1.3, 1.5, 27.7],
+        data: [47.8, 72.9, 21.8, 59.9, 12.5, 17.6],
     }],
 
     responsive: {
@@ -252,4 +296,4 @@ Highcharts.chart('advancedStats', {
         }]
     }
 
-}); 
+});
