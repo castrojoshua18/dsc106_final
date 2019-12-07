@@ -147,6 +147,10 @@ Highcharts.ajax({
                     enabled: false
                 }
             },
+            dataLabels: {
+                distance: 25,
+                alternate: false
+            },
             legend: {
                 enabled: false
             },
@@ -157,7 +161,10 @@ Highcharts.ajax({
                 text: "timeline"
             },
             tooltip: {
-                snap: 100
+                snap: 100,
+                style: {
+                    width: '250'
+                }
             },
             credits: {
                 enabled: false
@@ -166,30 +173,37 @@ Highcharts.ajax({
                 pointStart: Date.UTC(2018, 9, 17),
                 dataLabels: {
                     allowOverlap: false,
+                    format: '{point.label}'
                 },
+                
                  data: [{
-                        x: Date.UTC(2018, 9, 29),
+                    x: Date.UTC(2018, 9, 17),
+                    name: 'Start',
+                    label: 'Start',
+                    description: "Start of 2018 - 2019 NBA season"
+                },
+                {
+                        x: Date.UTC(2018, 9, 28),
                         name: 'Team Accomplishment',
                         label: 'Team',
                         description: "Seven game win streak to open the season. First 7-0 start since 1971-1972.",
                     },
                     {
-                        x: Date.UTC(2018,9,29),
+                        x: Date.UTC(2018,9,30),
                         name: 'Personal Accomplishment',
                         label: 'Personal',
-                        description: "Earned Eastern Conference Player of the Week for performance in games 2 - 5",
+                        description: "Earned Eastern Conference Player of the Week for performance in games 2-5 and" +
+                        " Eastern Conference Player of the Month for performance in October",
+                        dataLabels: {
+                            distance: 15,
+                            alternate: false
+                        }
                     },
                     {
                         x: Date.UTC(2018, 10, 23),
                         name: 'Personal Accomplishment',
                         label: 'Personal',
-                        description: "Earned Eastern Conference Player of the Week for performance in games 14 - 17"
-                    },
-                    {
-                        x: Date.UTC(2018, 9, 29),
-                        name: 'Personal Accomplishment',
-                        label: 'Personal',
-                        description: "Earned Eastern Conference Player of the Month for performance in October"
+                        description: "Earned Eastern Conference Player of the Week for performance in games 14-17"
                     },
                     {
                         x: Date.UTC(2018, 10, 28),
@@ -198,11 +212,68 @@ Highcharts.ajax({
                         description: "Earned Eastern Conference Player of the Month for performance in November"
                     },
                     {
-                        x: Date.UTC(2018, 11, 29),
+                        x: Date.UTC(2018, 11, 14),
                         name: 'Personal Accomplishment',
                         label: 'Personal',
-                        description: "Earned Eurostar European Player of the Month for performance in November"
+                        description: "Matched career high 44 pts"
                     },
+                    {
+                        x: Date.UTC(2018, 11, 15),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eurostar European Player of the Year for 2018 NBA performance"
+                    },
+                    {
+                        x: Date.UTC(2018, 11, 31),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Earned Eastern Conference Player of the Week for performance in games 28-31 and"+
+                        " and earned Eastern Conference Player of the Month for performance in December"
+                    },
+                    {
+                        x: Date.UTC(2019, 0, 9),
+                        name:'Personal Accomplishment',
+                        label: "Personal",
+                        description: "Recorded season-high 21 rebounds"
+                    },
+                    {
+                        x: Date.UTC(2019, 1, 13),
+                        name: 'Personal Accomplishment',
+                        label: 'Personal',
+                        description: "Tied Shaquille O'Neal for record of most games with at least 25 points, 15 rebounds, 5 assists"+
+                        "within a season at 13 games"
+                    },
+                    {
+                        x: Date.UTC(2019,1,28),
+                        name: "Personal Accomplishment",
+                        label: "Personal",
+                        description: "Earned Eastern Conference Player of the Month for performance in February"
+                    },
+                    {
+                        x: Date.UTC(2019,2,1),
+                        name: "Team Accomplishment",
+                        label: "Team",
+                        description: "First team to secure playoff berth in 2018-2019 season"
+                    },
+                    {
+                        x: Date.UTC(2019,2,17),
+                        name: "Personal Accomplishment",
+                        label: "Personal",
+                        description: "Scored career-high 52 points"
+                    },
+                    {
+                        x: Date.UTC(2019,3,4),
+                        name: "Team Accomplishment",
+                        label: "Team",
+                        description: "Secured the number 1 seed in the Eastern Conference. First time since 2000-2001 season"
+                    },
+                    {
+                        x: Date.UTC(2019,3,10),
+                        name: "Team Accomplishment",
+                        label: "Team",
+                        description: "Finished season with 60-22 record. First time since 1980-1981 season"
+                    }
+
 
                     
                 ]
