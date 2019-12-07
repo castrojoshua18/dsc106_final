@@ -33,11 +33,11 @@ Highcharts.chart('basicStats', {
     },
 
     title: {
-        text: 'Giannis Vs. Harden - Basic Stats',
+        text: 'Giannis Is Well-Rouned in Traditional Metrics',
         align: "center",
     },
     subtitle: {
-        text: "Source: NBA"
+        text: "Giannis Vs. Harden - Basic Stats"
     },
     pane: {
         size: '90%'
@@ -169,11 +169,11 @@ Highcharts.chart('advStats', {
     },
 
     title: {
-        text: 'Giannis Vs. Harden - Advanced Stats',
+        text: 'Giannis Superior in Non-Traditional Metrics',
         align: 'center'
     },
     subtitle: {
-        text: "Source: NBA"
+        text: "Giannis Vs. Harden - Advanced Stats"
     },
     pane: {
         size: '90%'
