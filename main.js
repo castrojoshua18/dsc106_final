@@ -61,7 +61,7 @@ Highcharts.ajax({
 
             yAxis: {
                 title: {
-                    enabled: false,
+                    text: "Games Won",
                 },
                 labels: {
                     formatter: function () {
@@ -132,7 +132,10 @@ Highcharts.ajax({
         Highcharts.chart(timelineChartDiv, {
             chart: {
                 type: 'timeline',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                style: {
+                    fontFamily: "Roboto"
+                }
             },
             colors: [
                 "#00471B"
@@ -163,7 +166,7 @@ Highcharts.ajax({
                 enabled: false
             },
             title: {
-                text: "Giannis Achieved a Number of Awards for Him & His Team"
+                text: "Giannis Achieved a Number of Awards for Himself & His Team"
             },
             subtitle: {
                 text: "Timeline of Awards"
