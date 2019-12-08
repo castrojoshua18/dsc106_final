@@ -20,7 +20,8 @@ function percentFormatter1() {
 function percentFormatter2() {
     var series = this.series,
         options = series.chart.options;
-    return '<span style="color:' + this.color + '">' + series.name + ': <b>' + (this.y * options.yAxis[this.index + 1].max) + '</b><br/>';
+        val = this.y * options.yAxis[this.index + 1].max
+    return '<span style="color:' + this.color + '">' + series.name + ': <b>' + val + ((val == 12.5 || val == 6.3) ? ' Overall' : '% Overall') +'</b><br/>';
 }
 
 Highcharts.chart('basicStats', {
@@ -263,8 +264,7 @@ Highcharts.chart('advStats', {
 
     tooltip: {
         shared: true,
-        pointFormatter: percentFormatter2,
-        // pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y} per game</b><br/>'
+        pointFormatter: percentFormatter2
     },
 
     legend: {
@@ -281,7 +281,7 @@ Highcharts.chart('advStats', {
         color: "#808080",
         data: [44.2, 87.9, 20.1, 54.1, 6.3, 8.9],
     }, {
-        name: 'Giannia Antetokounmpo',
+        name: 'Giannis Antetokounmpo',
         color: "#00471B",
         
         data: [47.8, 72.9, 21.8, 59.9, 12.5, 17.6],
