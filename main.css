@@ -6,6 +6,7 @@ body {
     margin-right: 5% */
 }
 
+
 .simpleTable {
     width: 100%;
     margin-bottom: 10px;
@@ -15,7 +16,7 @@ body {
 #grad {
     background-image: linear-gradient( #f7ead7,white,#f7ead7);
 }
-#vignette {
+.vignette {
     width: 140px;
    height: 140px;
    background: white; 
