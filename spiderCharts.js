@@ -32,7 +32,10 @@ Highcharts.chart('basicStats', {
         events: {
             load: switchToPercent
         },
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        style: {
+            fontFamily: "Roboto"
+        }
     },
 
     accessibility: {
@@ -168,7 +171,10 @@ Highcharts.chart('advStats', {
         events: {
             load: switchToPercent
         },
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        style: {
+            fontFamily: "Roboto"
+        }
     },
 
     accessibility: {
