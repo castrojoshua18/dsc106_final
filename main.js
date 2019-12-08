@@ -27,15 +27,12 @@ Highcharts.ajax({
                 }
             },
             title: {
-                text: 'catchy name',
+                text: 'Giannis Helped Bucks Maintain a Higher Win Record',
                 align: 'center',
-                style: {
-                    fontSize: '15px'
-                }
             },
             subtitle: {
-                text: 'Games Won',
-                align: 'left'
+                text: 'Comparison of Games Won Throughout the Season',
+                align: 'center'
             },
 
             plotOptions: {
@@ -166,10 +163,10 @@ Highcharts.ajax({
                 enabled: false
             },
             title: {
-                text: "timeline"
+                text: "Giannis Achieved a Number of Awards for Him & His Team"
             },
             subtitle: {
-                text: "timeline"
+                text: "Timeline of Awards"
             },
             tooltip: {
                 // positioner : function () {

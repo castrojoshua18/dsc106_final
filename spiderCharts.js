@@ -11,7 +11,13 @@ function switchToPercent() {
     });
 }
 
-function percentFormatter() {
+function percentFormatter1() {
+    var series = this.series,
+        options = series.chart.options;
+    return '<span style="color:' + this.color + '">' + series.name + ': <b>' + (this.y * options.yAxis[this.index + 1].max) + ' per game</b><br/>';
+}
+
+function percentFormatter2() {
     var series = this.series,
         options = series.chart.options;
     return '<span style="color:' + this.color + '">' + series.name + ': <b>' + (this.y * options.yAxis[this.index + 1].max) + '</b><br/>';
@@ -111,7 +117,7 @@ Highcharts.chart('basicStats', {
 
     tooltip: {
         shared: true,
-        pointFormatter: percentFormatter,
+        pointFormatter: percentFormatter1,
         pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y} per game</b><br/>'
     },
 
@@ -257,7 +263,7 @@ Highcharts.chart('advStats', {
 
     tooltip: {
         shared: true,
-        pointFormatter: percentFormatter,
+        pointFormatter: percentFormatter2,
         // pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y} per game</b><br/>'
     },
 
